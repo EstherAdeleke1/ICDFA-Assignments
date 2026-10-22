@@ -1,13 +1,14 @@
 # Business Continuity and Disaster Recovery Plan
 
-## Northbridge Skills Institute — GRC205 Incident Management and Business Continuity, Week 21
+## Northbridge Skills Institute - GRC205 Incident Management and Business Continuity, Week 21
 
 **Student name:** Esther Adeleke  
 **Student ID:** 2025/GCR/12667
 **Official email:** gcr2512667@students.icdfa.edu.ng
 **Role assumed:** Business Continuity and Disaster Recovery Coordinator  
 **Scenario:** Main site unavailable after flooding and power failure  
-**Word count:** Approximately 3,300 words excluding tables, references and appendices  
+**Word count:** Approximately 3,300 words excluding tables, references and appendices
+
 
 
 ## Executive summary
@@ -22,7 +23,7 @@ I recommend the Hot package for the next-year strategy. With the required indepe
 
 The scenario’s times are local West Africa Time (WAT). Cost rates are treated as separate, non-overlapping incremental costs, as instructed, and applied for the first 24 hours. The examination charge is added once if acceptable assessment service is not available at 11:00. For checkpoint age, the reference point is the 08:00 disruption. The warm-site timings include local validation, each action occupies one technician for its full duration, actions cannot be split, and parallel work is permitted only after prerequisites are complete. No actual supplier service-level agreement, backup log, learner accessibility register, insurance recovery, or facilities report is supplied; any related plan detail is a proposed control, not a verified fact. The package recovery windows are planning estimates and are not substituted for the measured warm-site schedule in Task 5.
 
-# Task 1 — Business Impact Analysis
+# Task 1 - Business Impact Analysis
 
 A BIA connects disruption to the services learners and staff need, rather than ranking servers only by technical convenience. This follows the teaching deck’s distinction between business continuity, which keeps organisational services operating, and disaster recovery, which restores technology (ICDFA, *Business Continuity and Disaster Recovery*, slides 3–4). Northbridge must therefore start continuity work while technicians restore the shared infrastructure.
 
@@ -30,11 +31,11 @@ A BIA connects disruption to the services learners and staff need, rather than r
 
 |Function / owner role|Users affected and critical resources|Dependencies and external needs|Impact over time / deadline|Minimum acceptable service and controls|Priority|
 |-|-|-|-|-|-|
-|**F1 Teaching and assessment** — Academic Registrar / Assessment Lead|120 learners sitting the 11:00 examination; assessors, invigilators, LMS01, DB01, devices and secure exam content|Network, AUTH01, DB01, LMS01; accessible room, power, invigilation, learner communications and approved assessment materials|Immediate high impact at 11:00; one-off NGN 120,000 rescheduling cost if no acceptable service; learner confidence and integrity are also at risk|Run an approved, time-controlled assessment for all learners. Use authenticated access where possible; otherwise use approved sealed/paper or offline materials, numbered scripts, two-person custody, attendance, invigilator logs and later dual-approved entry. Provide an accessible option and a documented alternative for learners unable to attend the centre.|**1 — urgent**|
-|**F2 Fees and finance** — Finance Manager|Learners making payments, finance staff, accounts and reconciliation; FIN01, DB01, receipts and wallet records|Network, AUTH01, DB01, FIN01 and external payment provider; secure bank/provider reports|NGN 40,000/hour; fee confirmation deadline 16:00 Day 0. Payments may succeed externally while local records remain stale.|Accept payments through the provider but do not claim local confirmation until reconciled. Keep a controlled register with transaction reference, amount, time, payer identifier and operator; two-person review and daily provider statement matching.|**2 — same day**|
-|**F3 Admissions and registration** — Admissions Manager|Prospective learners, admissions team; REG01, DB01, application forms and decision records|Network, AUTH01, DB01, REG01; admissions channels and privacy controls|NGN 20,000/hour; admissions close 18:00 Day 0. Lost or duplicated applications and missed deadlines are possible.|Time-stamp applications in a restricted register, issue a reference, retain the original submission and provide a clear receipt. A second staff member reviews changes; reconcile entries into REG01 with duplicate checks.|**3 — deadline-driven**|
-|**F4 Staff payroll** — HR/Payroll Lead|90 staff and payroll approvers; HR01, DB01, payroll file and bank submission credentials|Network, AUTH01, DB01, HR01, bank portal and verified employee/payee data|NGN 10,000/hour; bank submission due 12:00 Day 1. Errors or duplicate payment instructions may harm staff and require manual correction.|Prepare from the last approved payroll extract; independently verify changes and totals; require dual authorisation and bank acknowledgement. Do not create an unreviewed replacement file.|**4 — next-day deadline**|
-|**F5 Records and certificates** — Registrar / Records Manager|Learners and alumni requesting records; FS01, files and certificate templates|Network, AUTH01, FS01; secure file access, records staff and identity verification|NGN 5,000/hour; 48-hour internal service commitment. Confidentiality, integrity and access restrictions are essential.|Accept and time-stamp requests, verify identity, log access, prioritise urgent cases and issue only from a verified copy. No certificate or record is released if its source or authorisation is uncertain.|**5 — within 48 hours**|
+|**F1 Teaching and assessment** - Academic Registrar / Assessment Lead|120 learners sitting the 11:00 examination; assessors, invigilators, LMS01, DB01, devices and secure exam content|Network, AUTH01, DB01, LMS01; accessible room, power, invigilation, learner communications and approved assessment materials|Immediate high impact at 11:00; one-off NGN 120,000 rescheduling cost if no acceptable service; learner confidence and integrity are also at risk|Run an approved, time-controlled assessment for all learners. Use authenticated access where possible; otherwise use approved sealed/paper or offline materials, numbered scripts, two-person custody, attendance, invigilator logs and later dual-approved entry. Provide an accessible option and a documented alternative for learners unable to attend the centre.|**1 - urgent**|
+|**F2 Fees and finance** - Finance Manager|Learners making payments, finance staff, accounts and reconciliation; FIN01, DB01, receipts and wallet records|Network, AUTH01, DB01, FIN01 and external payment provider; secure bank/provider reports|NGN 40,000/hour; fee confirmation deadline 16:00 Day 0. Payments may succeed externally while local records remain stale.|Accept payments through the provider but do not claim local confirmation until reconciled. Keep a controlled register with transaction reference, amount, time, payer identifier and operator; two-person review and daily provider statement matching.|**2 - same day**|
+|**F3 Admissions and registration** - Admissions Manager|Prospective learners, admissions team; REG01, DB01, application forms and decision records|Network, AUTH01, DB01, REG01; admissions channels and privacy controls|NGN 20,000/hour; admissions close 18:00 Day 0. Lost or duplicated applications and missed deadlines are possible.|Time-stamp applications in a restricted register, issue a reference, retain the original submission and provide a clear receipt. A second staff member reviews changes; reconcile entries into REG01 with duplicate checks.|**3 - deadline-driven**|
+|**F4 Staff payroll** - HR/Payroll Lead|90 staff and payroll approvers; HR01, DB01, payroll file and bank submission credentials|Network, AUTH01, DB01, HR01, bank portal and verified employee/payee data|NGN 10,000/hour; bank submission due 12:00 Day 1. Errors or duplicate payment instructions may harm staff and require manual correction.|Prepare from the last approved payroll extract; independently verify changes and totals; require dual authorisation and bank acknowledgement. Do not create an unreviewed replacement file.|**4 - next-day deadline**|
+|**F5 Records and certificates** - Registrar / Records Manager|Learners and alumni requesting records; FS01, files and certificate templates|Network, AUTH01, FS01; secure file access, records staff and identity verification|NGN 5,000/hour; 48-hour internal service commitment. Confidentiality, integrity and access restrictions are essential.|Accept and time-stamp requests, verify identity, log access, prioritise urgent cases and issue only from a verified copy. No certificate or record is released if its source or authorisation is uncertain.|**5 - within 48 hours**|
 
 All five functions also require available and briefed staff, secure access, reliable communications, power, safe premises and clear delegated authority. Learner welfare, disability accommodations, language/accessibility needs, data minimisation and the ability to contact people who rely on institutional channels must be considered explicitly. Suppliers include the payment provider, alternate-site operator, telecom/mobile internet provider, offsite backup provider and any printing or transport supplier.
 
@@ -59,7 +60,7 @@ These calculations assume no continuity or recovery measure makes assessment acc
 
 The business priority is F1, F2, F3, F4 and F5 because of the 11:00 examination and the same-day finance/admissions deadlines. The technical order is different: the network must be restored before AUTH01; AUTH01 before security and backup checks; checks before DB01; DB01 before LMS01, FIN01, REG01 and HR01. FS01 also depends on AUTH01 and security/backup checks. Shared dependencies create at least four risks: (1) a delayed or failed AUTH01 restore blocks all local functions; (2) DB01 corruption or a broken incremental chain blocks four applications; (3) one compromised administrator identity could affect both production and backups; and (4) the alternate-site capacity and power/connectivity may be insufficient for all learners. A fifth risk is inconsistent finance records while the external provider continues accepting payments. The continuity lead must manage these business risks in parallel with the technical queue.
 
-# Task 2 — Recovery objectives and backup design
+# Task 2 - Recovery objectives and backup design
 
 ### 2.1 Definitions and targets
 
@@ -96,7 +97,7 @@ The exact DB01 restore chain is B01 full at 23:00 Day −1, followed by every re
 
 Offsite storage alone does not prove recoverability: copies can be incomplete, inaccessible when credentials fail, or dependent on the same compromised identity. A live replica can rapidly copy accidental deletion, corruption or malicious changes. Verification should include cryptographic hashes or vendor integrity results, completeness and sequence checks, a clean restore environment, malware/security checks, application-level row counts and transaction tests, access-control tests, file opening and version checks, and business-owner sampling. Test access using a break-glass identity that is independent of production administration. Conduct monthly sample restores and quarterly end-to-end recovery tests. The present brief does not confirm immutability, independent credentials, encryption-key recovery or successful restore testing; these remain unverified until evidenced.
 
-# Task 3 — Recovery strategy and budget
+# Task 3 - Recovery strategy and budget
 
 All package costs must include the two required additions: NGN 400,000 annually for independent protected backups and NGN 200,000 for training and tests.
 
@@ -112,7 +113,7 @@ The eight-hour loss estimate is NGN 1.2 million and the 24-hour estimate NGN 3.3
 
 Cold offers lower cost but prolonged service interruption and high data loss. Warm provides a sensible compromise for many organisations, but its quoted 3–5 hour service and 1–6 hour loss window conflict with Northbridge’s time-critical assessment and 15-minute targets. Hot is the best strategic fit within the stated budget, but no budget buffer remains for extra licences, travel, power, or unplanned supplier fees. The executive sponsor owns acceptance of that financial residual risk; business owners own the consequence of any formally relaxed RTO/RPO.
 
-# Task 4 — Coordinated continuity and disaster recovery plan
+# Task 4 - Coordinated continuity and disaster recovery plan
 
 ### 4.1 Activation, authority and coordination
 
@@ -179,9 +180,9 @@ Restoring technology is not equivalent to resuming an acceptable service. The bu
 |Backup/alternate-site suppliers|Technical Lead / Facilities Lead|Request incident support, access and recovery estimates; obtain written confirmation of service status and dependencies.|
 |Executive/board|BC/DR Coordinator|Situation reports every 30 minutes initially, including decisions, deadlines, risks, cost estimates and required approvals.|
 
-**Initial learner notice (simulated, 145 words):**
+**Initial learner notice:**
 
-> \\\*\\\*Subject: Important update: Northbridge site closure and today’s examination\\\*\\\*
+> Subject: Important update: Northbridge site closure and today’s examination
 >
 > Northbridge Skills Institute’s main site is temporarily unavailable following flooding and a power failure. The building is being treated as inaccessible while Facilities confirms that it is safe. Our email service remains available, and the continuity team is working to maintain teaching and learner support from an alternate location.
 >
@@ -193,7 +194,7 @@ Restoring technology is not equivalent to resuming an acceptable service. The bu
 
 The primary site must not reopen merely because the 72-hour estimate has elapsed. Facilities must document structural, electrical, water, sanitation, fire and environmental clearance. IT must inspect equipment for water or power damage and confirm safe power, network and environmental controls. The Incident Executive authorises return after consulting Facilities, Technical Lead and business owners. New records created at the alternate site are transferred in numbered batches with operator, timestamp, source and destination, record counts and hashes where applicable. A second person verifies counts and exceptions before the temporary register is locked as read-only. Business owners sign off reconciliations, the Technical Lead confirms stable monitoring, and the Coordinator issues a final notice. Temporary records are retained under the records schedule until the reconciliation and audit period is complete.
 
-# Task 5 — Recovery schedule and exercise
+# Task 5 - Recovery schedule and exercise
 
 ### 5.1 Modelled warm-site baseline schedule
 
@@ -225,7 +226,7 @@ The critical path to assessment is network (30) + AUTH01 (30) + security/backup 
 
 The baseline schedule proves that an acceptable service needs more than a successful server restore. Without a separately approved assessment workaround, F1 misses the 11:00 deadline and the NGN 120,000 rescheduling trigger applies. The fee and admissions workarounds should remain active until transactions are reconciled. The baseline data point for DB01 is 07:00, an age of one hour: this misses F1–F3’s 15-minute RPOs, meets F4’s one-hour target only at the boundary, and depends on the entire chain passing. AUTH01’s eight-hour-old snapshot and FS01’s nine-hour-old full backup miss their RPOs. These are modelled results based on the brief’s assumption that baseline backup integrity checks pass; they are not claims that a live drill occurred.
 
-### 5.3 Forty-five-minute tabletop exercise log
+### 5.3 45 minute tabletop exercise log
 
 **Exercise purpose:** test decision-making when the baseline assumptions fail. **Participants:** Coordinator, Incident Executive, Technical Lead, Assessment Lead, Finance Manager, Admissions Manager, HR/Payroll Lead, Records Manager, Facilities Lead, Communications Lead and Incident Response Lead. A single student may simulate all roles. **Scoring:** decision recorded, owner assigned, rationale stated, learner/business impact considered, and a measurable follow-up action logged.
 
@@ -250,7 +251,7 @@ The baseline schedule proves that an acceptable service needs more than a succes
 |P2|Confirm five-day alternate-site and staff welfare arrangements with suppliers|Facilities Lead|Within 30 days|Written supplier confirmation and documented capacity, power, connectivity and accessibility checks.|
 |P2|Conduct full recovery drill and update actual RTO/RPO dashboard|BC/DR Coordinator|Within 60 days|All five functions tested; results recorded, owners accept gaps and 90% of actions have due dates.|
 
-# Task 6 — Governance and performance measures
+# Task 6 - Governance and performance measures
 
 ### 6.1 Ownership, maintenance and framework alignment
 
